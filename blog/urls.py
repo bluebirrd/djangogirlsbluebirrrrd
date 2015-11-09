@@ -3,7 +3,7 @@ from . import views
 # from .blog_urls import urlpatterns as blog_urls
 
 urlpatterns = [
-	# url(r'^$', )
+	url(r'^$', views.timetable_landing, name='home'),
 	url(r'^blog/', include('blog.blog_urls')),
-	# url(r'^', include(blog_urls)),
+	url(r'^about/?$', views.timetable_about, name='about'),
 ]
